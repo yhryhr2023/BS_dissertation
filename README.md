@@ -14,8 +14,6 @@ plt.rcParams['axes.unicode_minus'] = False #用来正常显示负号
 ### 读取数据
 ```Python
 发芽天数 = pd.read_csv('发芽天数.csv')
-富集系数 = pd.read_csv('富集系数.csv')
-叶绿素 = pd.read_csv('叶绿素.csv')
 ```
 
 ### 耐性特征
