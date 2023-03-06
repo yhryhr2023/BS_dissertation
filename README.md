@@ -37,6 +37,13 @@ plt.title('CK组发芽天数', size = 17)
 
 其他组的发芽天数
 ```
+#提取需要的数据
+实验组1 = 发芽天数.iloc[1]
+实验组2 = 发芽天数.iloc[2]
+实验组3 = 发芽天数.iloc[3]
+实验组4 = 发芽天数.iloc[4]
+
+#绘制图片
 figure, axis = plt.subplots(2, 2)
 实验组1.plot(kind="bar", ax = axis[0,0], figsize = (18, 8), title = '实验组1')
 实验组2.plot(kind="bar", ax = axis[0,1], title = '实验组2')
