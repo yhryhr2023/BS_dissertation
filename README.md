@@ -54,3 +54,31 @@ plt.suptitle(' 其他组的发芽天数 ', fontsize=20)
 ```
 ![My Image](其他组的发芽天数.jpg)
 
+各组平均发芽天数对比图
+```
+#求取每组发芽天数平均数
+发芽天数['mean'] = 发芽天数.mean(axis=1)
+
+a = 发芽天数.index
+b = 发芽天数['mean'].tolist()
+
+# 画折线图
+plt.figure(figsize=(15,7))
+plt.plot(a,b)
+plt.ylabel("平均发芽天数", size = 13)
+plt.title('各组平均发芽天数对比图', size = 17)
+
+# 添加数据标签
+# zip joins x and y coordinates in pairs
+for x,y in zip(a,b):
+
+    label = "{:.2f}".format(y)
+
+    plt.annotate(label, # this is the text
+                 (x,y), # these are the coordinates to position the label
+                 textcoords="offset points", # how to position the text
+                 xytext=(0,-10), # distance from text to points (x,y)
+                 fontsize=16,
+                 ha='left') # horizontal alignment can be left, right or center
+```
+![My Image](各组平均发芽天数对比图.jpg)
