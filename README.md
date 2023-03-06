@@ -35,4 +35,15 @@ plt.title('CK组发芽天数', size = 17)
 ```
 ![My Image](CK组发芽天数.jpg)
 
+其他组的发芽天数
+```
+figure, axis = plt.subplots(2, 2)
+实验组1.plot(kind="bar", ax = axis[0,0], figsize = (18, 8), title = '实验组1')
+实验组2.plot(kind="bar", ax = axis[0,1], title = '实验组2')
+实验组3.plot(kind="bar", ax = axis[1,0], title = '实验组3')
+实验组4.plot(kind="bar", ax = axis[1,1], title = '实验组4')
+
+plt.suptitle(' 其他组的发芽天数 ', fontsize=20)
+```
+![My Image](其他组的发芽天数.jpg)
 
